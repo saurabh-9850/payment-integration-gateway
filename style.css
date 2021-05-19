@@ -1,0 +1,355 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+.upper-cont{
+    background-color: black;
+}
+nav{
+   
+    height: 70px;
+    width: 100%;
+   
+
+}
+label.logo{
+    font-size: 30px;
+   color: white;
+   line-height: 70px;
+   padding: 0px 32px;
+   font-weight: bold;
+}
+.logo div{
+    display: inline-block;
+}
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+ 
+}
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+a.active , a:hover{
+    background: #8245ec;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 2px;
+
+
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 70px;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/*  css for section starts */
+.upper-cont::before{
+    
+    background: linear-gradient(rgba(4, 9, 30, 1.7), rgba(4, 9, 32, -0.7)), url(/image3.jpg) center center / cover no-repeat;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    box-shadow:-8px 23px 44px -30px #000;    
+}
+.upper-sect{
+    margin: 39vh 0 36vh 0;
+    display: flex;
+    align-items: center;
+    height:80%; width: 100%;
+    flex-direction: column;
+    color: white; font-size: 33px;
+    text-align: center;  font-weight: bold;
+    justify-content: center;
+
+}
+.upper-sect-btn{
+    color: cornflowerblue;
+    background-color: #8245ec;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+#btns{
+    display: flex;
+}
+#btns form{
+    margin: 0px 10px 0px 0px;
+    text-transform: uppercase;
+}
+
+.upper-sect-btn:hover , .middle-sect-btn {
+  background-color: #9a7cce;
+}
+/* count starts here */
+.cont-count{
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.count-box{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.count-box .icon{
+    font-size: 100px;
+    color: rgb(74, 74, 143);
+}
+.count-box-heading{
+    font-size: 40px;
+    color: rgb(74, 74, 143);
+}
+.count-box-descrip{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+/* card strtas here */
+.cardhead{
+  
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+}
+.cardhead::after{
+    content: '';
+    height: 5px;
+    width: 12%;
+    background: #f24432;
+    position: absolute;
+    left: calc(54% - 10%);
+    bottom: -5px;
+  
+    
+  }
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 37px;
+    padding-bottom: 40px;
+    color: rgb(0, 0, 0);
+    justify-content: space-around;
+    background: rgb(255, 255, 255);
+    padding-top: 7px;
+}
+.cards{
+    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 
+    0 6.7px 5.3px rgb(0 0 0 / 5%), 
+    0 12.5px 10px rgb(0 0 0 / 6%),
+     0 22.3px 17.9px rgb(0 0 0 / 7%),
+      0 41.8px 33.4px rgb(0 0 0 / 9%), 
+      0 100px 80px rgb(0 0 0 / 12%);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+  
+    border-radius: 20px;
+    transition: all 2s;
+    height: fit-content;
+    margin: 26px;
+}
+.cards:hover{
+    transform: translateY(25px);
+   
+    background-color: rgb(212, 205, 194);
+
+}
+.card-item1{
+    width: 100%;
+    height: 75%;
+}
+.imgcard{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.middle-sect-btn{
+    background-color: rgb(130, 69, 236);
+    margin-top: 8px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+}
+
+
+
+/* make site responsive */
+@media screen and (max-width:950px){
+   
+    .checkbtn{
+        display: block;
+    }
+    label.logo{
+       font-size: 21px;
+       color: white;
+       line-height: 70px;
+       padding: 0px 18px;
+       font-weight: bold;
+    }
+   
+    #navbar ul{
+        position: fixed;
+        background: #0d2b13;
+        height: 100vh;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font:30px;
+    }
+ 
+    a.active , a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .upper-sect{
+
+        font-size: 25px;
+    }
+    .cards{
+        
+    margin: 10px 20px;
+
+    }
+    .cont-count{
+        flex-direction: column;
+    }
+    .count-box .icon {
+        font-size: 89px;
+       
+    }
+    .count-box-descrip {
+        font-size: 23px;
+       
+    }
+    .count-box-heading {
+        font-size: 35px;
+        
+    }
+}
+
+/* footer starts here */
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+  
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

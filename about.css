@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body::before{
+    background: linear-gradient(rgba(4,9,32,0.7),rgba(12,-30,30,-5.3)), url(/about3.jpg) no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    z-index: -1;
+     
+}
+
+.about-sect{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    background: linear-gradient(rgba(4, 9, 30, 1.7), rgba(4, 9, 32, -0.7));
+    
+}
+nav{
+   background-color: black;
+    height: 70px;
+    width: 100%;
+   
+
+}
+label.logo{
+    font-size: 30px;
+   color: rgb(255, 255, 255);
+   line-height: 70px;
+   padding: 0px 32px;
+   font-weight: bold;
+}
+.logo div{
+    display: inline-block;
+}
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+ 
+}
+nav ul li a{
+    color: rgb(255, 251, 251);
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+a.active , a:hover{
+    background: #8245ec;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 2px;
+
+
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 70px;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+    display: none;
+}
+#check{
+    display: none;
+}
+.about-sect{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        color: rgb(0, 0, 0);
+        justify-content: space-around;
+        align-items: center;
+}
+.aboutbox {
+    width: 70%;
+    height: 77vh;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: WHITE;
+  
+        -moz-box-shadow:    inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow:         inset 0 0 10px #000000;
+    
+    /* background: linear-gradient(rgba(4, 9, 30, 1.7), rgba(4, 9, 32, 0.3)); */
+}
+.abouthead{
+  
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+}
+.abouthead::after {
+    content: '';
+    height: 5px;
+    width: 62%;
+    background: #f24432;
+    position: absolute;
+    left: calc(29% - 10%);
+    bottom: -5px;
+}
+.aboutp{
+    padding: 61px;
+}
+.about-section{
+    
+    background-size: 55%;
+    /* background-color: #fdfdfd; */
+    overflow: hidden;
+    padding: 100px 0;
+    
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: rgb(0, 0, 0);
+}
+/* responsive */
+@media screen and (max-width:950px){
+   
+    .checkbtn{
+        display: block;
+    }
+    label.logo{
+        font-size: 21px;
+    color: white;
+    line-height: 70px;
+    padding: 0px 18px;
+    font-weight: bold;
+    }
+   
+    #navbar ul{
+        position: fixed;
+
+        background: #0d2b13;
+        height: 100vh;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font:30px;
+    }
+ 
+    a.active , a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
